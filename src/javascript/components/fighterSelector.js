@@ -2,11 +2,24 @@ import createElement from '../helpers/domHelper';
 import renderArena from './arena';
 import versusImg from '../../../resources/versus.png';
 import { createFighterPreview } from './fighterPreview';
+import FighterService from '../services/fightersService';
 
 const fighterDetailsMap = new Map();
 
 export async function getFighterInfo(fighterId) {
     // get fighter info from fighterDetailsMap or from service and write it to fighterDetailsMap
+    try {
+        const fighterDetails = await FighterService.getFighterDetails(fighterId);//return obj with data
+        
+        // Process the fighterDetails (e.g., display in a modal, update UI, etc.)
+        //fighterDetails(fighterDetails);
+        return fighterDetails; // Optionally return the details
+    } catch (error) {
+        // Handle errors if fetching fighter details fails
+        console.error('Error fetching fighter information:', error);
+        // Handle error in UI or log the error message
+        throw error; // Propagate the error if necessary
+    }
 }
 
 function startFight(selectedFighters) {
