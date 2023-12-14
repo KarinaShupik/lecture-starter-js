@@ -11,3 +11,35 @@
 .fighter-preview___left {
   align-items: flex-start;
 }
+
+/* CSS Styles for Fighter Preview Elements */
+.fighter-preview___root {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fighter-preview___left {
+  float: left;
+  margin-right: 20px;
+}
+
+.fighter-preview___right {
+  float: right;
+  margin-left: 20px;
+}
+
+.fighter-preview___name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.fighter-preview___health,
+.fighter-preview___attack,
+.fighter-preview___defense {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
